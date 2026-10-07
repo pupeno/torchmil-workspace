@@ -1,0 +1,19 @@
+[project]
+name = "torchmil-workspace"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchmil[dev,docs,tests]",
+]
+
+[tool.uv.sources]
+# Resolve ``torchmil`` from the sibling upstream checkout, not PyPI.
+torchmil = { path = "../torchmil", editable = true }
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true

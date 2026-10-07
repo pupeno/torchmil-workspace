@@ -1,0 +1,39 @@
+{
+    "name": "torchmil",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+    "features": {
+        // Install node.
+        "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+        // Install the GitHub CLI.
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+
+    // Fixes the hostname so shell prompts and logs identify the container, and
+    // exposes the host GPU(s) inside it.
+    "runArgs": ["--hostname", "torchmil", "--runtime", "nvidia", "--gpus", "all"],
+
+    // Keep uv's cache on the workspace filesystem so it can hardlink packages
+    // into project virtual environments.
+    "containerEnv": {
+        "UV_CACHE_DIR": "${containerWorkspaceFolder}/.uv-cache"
+    },
+
+    // Use the shared Python environment in editor terminals and tasks.
+    "remoteEnv": {
+        "VIRTUAL_ENV": "${containerWorkspaceFolder}/workspace/.venv",
+        "PATH": "${containerWorkspaceFolder}/workspace/.venv/bin:${containerEnv:PATH}"
+    },
+
+    "mounts": [
+        // One volume for the whole container home so all config survive a rebuild.
+        "source=torchmil-home,target=/home/vscode,type=volume"
+    ],
+
+    // Runs the post-create script to set up the container.
+    "postCreateCommand": ".devcontainer/post-create.sh",
+
+    // Connect to the devcontainer as non-root.
+    // It allows Claude Code run with --dangerously-skip-permissions.
+    "remoteUser": "vscode"
+}
