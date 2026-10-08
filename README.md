@@ -6,9 +6,13 @@ It keeps the devcontainer configuration, experiments, useful scripts, documentat
 
 ## Open Tickets
 
+- [#29 - [BUG] MultiheadSelfAttention still uses dropout in eval mode](https://github.com/Franblueee/torchmil/issues/29).
+
 ## Closed Tickets
 
 ## Open Pull Requests
+
+- [#28 - Fix MultiheadSelfAttention still using dropout in eval mode](https://github.com/Franblueee/torchmil/pull/28): fixes [#29](https://github.com/Franblueee/torchmil/issues/29).
 
 ## Actioned Pull Requests
 
