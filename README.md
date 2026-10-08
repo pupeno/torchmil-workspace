@@ -7,12 +7,14 @@ It keeps the devcontainer configuration, experiments, useful scripts, documentat
 ## Open Tickets
 
 - [#29 - [BUG] MultiheadSelfAttention still uses dropout in eval mode](https://github.com/Franblueee/torchmil/issues/29).
+- [#31 - [BUG] ProbSmoothAttentionPool regularization includes padded instances](https://github.com/Franblueee/torchmil/issues/31).
 
 ## Closed Tickets
 
 ## Open Pull Requests
 
 - [#28 - Fix MultiheadSelfAttention still using dropout in eval mode](https://github.com/Franblueee/torchmil/pull/28): fixes [#29](https://github.com/Franblueee/torchmil/issues/29).
+- [#30 - Fix padding in ProbSmoothAttentionPool regularization](https://github.com/Franblueee/torchmil/pull/30): fixes [#31](https://github.com/Franblueee/torchmil/issues/31).
 
 ## Actioned Pull Requests
 
