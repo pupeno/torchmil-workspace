@@ -17,6 +17,7 @@ It keeps the devcontainer configuration, experiments, useful scripts, documentat
 - [#28 - Fix MultiheadSelfAttention still using dropout in eval mode](https://github.com/Franblueee/torchmil/pull/28): fixes [#29](https://github.com/Franblueee/torchmil/issues/29).
 - [#30 - Fix padding in ProbSmoothAttentionPool regularization](https://github.com/Franblueee/torchmil/pull/30): fixes [#31](https://github.com/Franblueee/torchmil/issues/31).
 - [#32 - Fix SmoothTop1SVM target broadcasting](https://github.com/Franblueee/torchmil/pull/32): fixes [#33](https://github.com/Franblueee/torchmil/issues/33).
+- [#34 - Fix documentation build command in PR checklist](https://github.com/Franblueee/torchmil/pull/34).
 
 ## Actioned Pull Requests
 
