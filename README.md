@@ -9,6 +9,7 @@ It keeps the devcontainer configuration, experiments, useful scripts, documentat
 - [#29 - [BUG] MultiheadSelfAttention still uses dropout in eval mode](https://github.com/Franblueee/torchmil/issues/29).
 - [#31 - [BUG] ProbSmoothAttentionPool regularization includes padded instances](https://github.com/Franblueee/torchmil/issues/31).
 - [#33 - [BUG] SmoothTop1SVM mean loss changes when identical samples are repeated](https://github.com/Franblueee/torchmil/issues/33).
+- [#36 - [BUG] DTFDMIL prediction changes when a bag is zero-padded and masked](https://github.com/Franblueee/torchmil/issues/36).
 
 ## Closed Tickets
 
@@ -18,6 +19,7 @@ It keeps the devcontainer configuration, experiments, useful scripts, documentat
 - [#30 - Fix padding in ProbSmoothAttentionPool regularization](https://github.com/Franblueee/torchmil/pull/30): fixes [#31](https://github.com/Franblueee/torchmil/issues/31).
 - [#32 - Fix SmoothTop1SVM target broadcasting](https://github.com/Franblueee/torchmil/pull/32): fixes [#33](https://github.com/Franblueee/torchmil/issues/33).
 - [#34 - Fix documentation build command in PR checklist](https://github.com/Franblueee/torchmil/pull/34).
+- [#35 - Fix DTFDMIL predictions changing with masked padding](https://github.com/Franblueee/torchmil/pull/35): fixes [#36](https://github.com/Franblueee/torchmil/issues/36).
 
 ## Actioned Pull Requests
 
